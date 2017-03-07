@@ -1,0 +1,62 @@
+@heart_color: #F62459;
+@elephant_body_color: #95a5a6;
+@elephant_ear_color: #7f8c8d;
+
+.elephant {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: @elephant_body_color;
+  border-radius: 40%;
+  background-image: // left eye
+  radial-gradient(circle at 32% 50%, white 4px, transparent 3px), radial-gradient(circle at 30% 50%, #333 10px, transparent 4px), // right eye
+  radial-gradient(circle at 69% 50%, white 5px, transparent 3px), radial-gradient(circle at 70% 50%, #333 10px, transparent 4px), linear-gradient(70deg, @elephant_body_color 50%, lighten(@elephant_body_color, 10%) 50%);
+  box-shadow: // left ear
+  -100px -40px 0px -10px @elephant_ear_color, // right ear
+  100px -40px 0px -10px @elephant_ear_color;
+  @nose_width: 150px;
+.nose {
+  width: @nose_width;
+  height: @nose_width / 2;
+  position: absolute;
+  border-radius: 0 0 @nose_width @nose_width;
+  top: 190px;
+  left: -25px;
+  background-image: radial-gradient(circle at 40% 0px, transparent @nose_width/5, @elephant_body_color 1px);
+}
+
+.heart {
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  background-color: @heart_color;
+  top: 140px;
+  left: -40px;
+  transform: rotate(40deg);
+  border-radius: 40% 0 0 40%;
+  
+  &:after {
+    height: 20px;
+    width: 40px;
+    background-color: @heart_color;
+    transform: rotate(90deg);
+    left: 10px;
+    top: -10px;
+    border-radius: 40% 0 0 40%;
+  }
+  
+  &.heart2 {
+    transform: scale(0.8);
+    top: 100px;
+    left: -85px;
+  }
+  
+  &.heart3 {
+    transform: scale(0.3);
+    top: 40px;
+    left: -85px;
+    
+  }
+}
+}
+
