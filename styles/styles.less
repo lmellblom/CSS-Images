@@ -3,6 +3,7 @@
 // the daily css challanges
 @import "panda-cub.less";
 @import "elephant.less";
+@import "beaver.less";
 
 // styles to the body and arrange the items
 body {
@@ -17,6 +18,7 @@ body {
     .display(flex);
     .flex-direction(row);
     .flex(1);
+    .flex-wrap(wrap)
 }
 
 .header {
@@ -58,7 +60,7 @@ div:after {
 
 .item {
     .display(flex);
-    .flex(0.5);
+    .flex(1 0 50%);
     .justify-content(center);
     .align-items(center);
     min-height: 400px;
@@ -68,6 +70,14 @@ div:after {
     }
     &.item-elephant {
         background: #bdc3c7;
+    }
+    &.item-beaver {
+        background: #F4F5D6;
+        div {
+            margin-left: 140px;
+            margin-top: 80px;
+
+        }
     }
 }
 

@@ -1,0 +1,46 @@
+@lighter_body_color: #d79d65;
+@body_color: #cd853f;
+@tail_color: #8b4513;
+.beaver {
+  // face, eyes, ears
+  &:after {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: -95px;
+    margin-top: 130px;
+    box-shadow: 45px -42px 0 -1px black, 45px -45px 0 13px white, 0 0 0 13px white, 45px 5px 0 -4px black, 40px 20px 0 2px @lighter_body_color, 60px 0px 0 2px @lighter_body_color, 55px 15px 0 -4px white, -55px -10px 0 15px @body_color, 35px -100px 0 15px @body_color, ;
+  }
+  &:before {
+    margin-left: -100px;
+    margin-top: 50px;
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-image: // lighter
+    radial-gradient(ellipse at center 100%, @lighter_body_color 25px, transparent 20px), // head
+    radial-gradient(circle at center 10px, @body_color 120px, transparent 80px), // body
+    radial-gradient(ellipse at center 190px, @body_color 50px, transparent 50px);
+    background-size: 100% 100%, 100% 100%;
+    background-position: 0 0, 0 0;
+    border-top-left-radius: 100px 90px;
+    border-top-right-radius: 100px 90px;
+    border-bottom-right-radius: 60px 70px;
+    border-bottom-left-radius: 60px 70px;
+    transform: rotate(-55deg);
+    box-shadow: 0 70px 5px -30px rgba(0, 0, 0, 0.03);
+  }
+  // tail
+  transform: rotate(55deg);
+  width: 100px;
+  height: 200px;
+  background-color: @tail_color;
+  border-radius: 50px;
+  border-bottom-left-radius: 50px 150px;
+  border-bottom-right-radius: 50px 150px;
+  box-shadow: inset -10px -5px 0 rgba(0, 0, 0, 0.2);
+  background-image: repeating-linear-gradient(60deg, transparent, transparent 14px, rgba(0, 0, 0, 0.2) 14px, rgba(0, 0, 0, 0.2) 18px),
+  repeating-linear-gradient(-12deg, transparent, transparent 14px, rgba(0, 0, 0, 0.2) 14px, rgba(0, 0, 0, 0.2) 18px);
+}
