@@ -4,6 +4,7 @@
 @import "panda-cub.less";
 @import "elephant.less";
 @import "beaver.less";
+@import "tiger.less";
 
 // styles to the body and arrange the items
 body {
@@ -63,6 +64,7 @@ div:after {
     .flex(1 0 50%);
     .justify-content(center);
     .align-items(center);
+    position: relative;
     min-height: 400px;
 
     &.item-panda {
@@ -73,11 +75,28 @@ div:after {
     }
     &.item-beaver {
         background: #F4F5D6;
-        div {
+        .beaver {
             margin-left: 140px;
             margin-top: 80px;
 
         }
+    }
+    &.item-tiger {
+        background: #9b59b6;
+    }
+
+    .description {
+        font-size: 24px;
+        font-family: 'Lato';
+        color: #333;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        .smaller {
+            font-size: 14px;
+        }
+        
     }
 }
 

@@ -1,0 +1,159 @@
+@pink: #F1A9A0;
+@yellow: #f39c12;
+@orange: #e67e22;
+/* not the most pretty code but it works. */
+.tiger {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  background-color: @yellow;
+  border-radius: 50%;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 5px, black 5px, black 18px), repeating-linear-gradient(90deg, transparent, transparent 6px, black 6px, black 15px), repeating-linear-gradient(90deg, transparent, transparent 5px, black 5px, black 18px), repeating-linear-gradient(15deg, transparent, transparent 5px, @orange 5px, @orange 18px), ;
+  background-size: 10% 20%, 10% 15%, 10% 25%, 15% 100%;
+  background-repeat: no-repeat;
+  background-position: 60px 0px, 90px 0px, 120px 0px, 85px 0;
+  .cheeks {
+    width: 20px;
+    height: 20px;
+    background-color: @yellow;
+    border-radius: 10px 5px 20px 4px;
+    margin-top: 110px;
+    transform: rotate(40deg);
+    margin-left: -3px;
+    position: absolute;
+    &.cheeks1 {
+      margin-top: 130px;
+      margin-left: 5px;
+    }
+    &.cheeks2 {
+      margin-top: 145px;
+      margin-left: 15px;
+    }
+    &.cheeks3 {
+      transform: rotate(30deg);
+      margin-top: 110px;
+      margin-left: 185px;
+    }
+    &.cheeks4 {
+      transform: rotate(30deg);
+      margin-top: 130px;
+      margin-left: 175px;
+    }
+    &.cheeks5 {
+      transform: rotate(40deg);
+      margin-top: 145px;
+      margin-left: 165px;
+    }
+  }
+  @eyes_width: 30px;
+  .eye {
+    width: @eyes_width;
+    height: @eyes_width/2;
+    position: absolute;
+    border-radius: 0 0 @eyes_width @eyes_width;
+    background-image: radial-gradient(circle at 50% 0px, transparent 12px, black 1px);
+    transform: rotate(180deg);
+    &.left {
+      margin-left: 39px;
+      margin-top: 65px;
+    }
+    &.right {
+      margin-left: 127px;
+      margin-top: 65px;
+    }
+  }
+  .mouth {
+    position: absolute;
+    width: 91px;
+    height: 91px;
+    background-color: white;
+    border-bottom-right-radius: 90px;
+    transform: rotate(45deg);
+    margin-top: 113px;
+    margin-left: 54px;
+    &:after {
+      width: 20px;
+      height: 10px;
+      position: absolute;
+      border-radius: 0 0 20px 20px;
+      background-image: radial-gradient(circle at 50% 0px, transparent 7px, black 1px);
+      margin-top: 40px;
+      margin-left: 35px;
+      transform: rotate(-30deg);
+    }
+  }
+  .nose {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    transform: rotate(135deg);
+    margin-left: 89px;
+    margin-top: 92px;
+    .lines {
+      position: absolute;
+      transform: rotate(-120deg);
+      width: 80px;
+      height: 2px;
+      background-color: black;
+      margin-left: 30px;
+      margin-top: 35px;
+      &.lines1 {
+        width: 65px;
+        transform: rotate(-140deg);
+        margin-top: 19px;
+        margin-left: 49px;
+      }
+      &.lines2 {
+        transform: rotate(-160deg);
+        margin-top: -45px;
+        margin-left: -55px;
+      }
+      &.lines3 {
+        width: 62px;
+        transform: rotate(-140deg);
+        margin-top: -55px;
+        margin-left: -30px;
+      }
+    }
+  }
+  .pink-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: @pink;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 40px;
+    box-shadow: 88px 0 0 0 @pink;
+  }
+  .ear {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    background-color: @yellow;
+    border-radius: 50%;
+    border-bottom-left-radius: 30px 50px;
+    border-bottom-right-radius: 20px 50px;
+    transform: rotate(-35deg);
+    margin-top: -20px;
+    box-shadow: inset 4px 10px 0px 2px @orange;
+    &.right {
+      transform: rotate(35deg);
+      margin-left: 160px;
+    }
+  }
+  .black-dots {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 10;
+    margin-top: 150px;
+    margin-left: 50px;
+    box-shadow: 0px -10px 0 0, 20px -20px 0 0, -15px -30px 0 0, 0px -40px 0 0, 10px -30px 0 0, 80px -25px 0 0, 100px -40px 0 0, 85px -15px 0 0, 90px -30px 0 0;
+  }
+}
