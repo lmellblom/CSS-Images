@@ -6,6 +6,9 @@
 @import "beaver.less";
 @import "tiger.less";
 @import "baymax.less";
+@import "clock.less";
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 
 // styles to the body and arrange the items
 body {
@@ -89,13 +92,16 @@ div:after {
         background: #2C3E50;
         z-index: 0;
     }
+    &.item-clock {
+        background: #DCC6E0;
+    }
 
     .description {
         font-size: 24px;
-        font-family: 'Lato';
+        font-family: 'Bad Script', cursive;
         color: #333;
         position: absolute;
-        bottom: 20px;
+        bottom: 10px;
         left: 20px;
 
         .smaller {

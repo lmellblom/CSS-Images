@@ -1,0 +1,77 @@
+@main_color: #DCC6E0;
+@main_color_lighter: lighten(@main_color, 10%);
+@grey: #333;
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 15px solid @main_color_lighter;
+  
+  &:before {
+    font-family: 'Bad Script', cursive;
+    color: white;
+    font-size: 25px;
+    content: "Tic Toc";
+    transform: rotate(20deg);
+    left: 180px;
+    width: 200px;
+  }
+  
+  box-shadow: inset 0px 4px 4px 8px lighten(@main_color_lighter, 5%);
+  
+  background-image: 
+    // makes a white circle in the middle, to cut the lines in the clock
+    radial-gradient(circle at center, white 52%, transparent 52%, transparent 60%, white 60%),
+    // the lines
+    linear-gradient(to bottom, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%),
+    linear-gradient(30deg, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%),
+    linear-gradient(60deg, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%),
+    linear-gradient(90deg, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%),
+    linear-gradient(-30deg, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%),
+    linear-gradient(-60deg, transparent 50%, #d3d3d3 50%, #d3d3d3 51%, transparent 51%);
+  background-color: white;
+  
+  &:after {
+    width: 230px;
+    height: 115px;
+    top: 100px;
+    left: -15px;
+    transform-origin: 50% 0%;
+    transform: rotate(-45deg);
+    background-color: fade(@grey, 3%);
+    border-bottom-left-radius: 230px;
+    border-bottom-right-radius: 230px;
+  }
+  
+  .middle-circle {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @grey;
+    box-shadow: 1px 4px 0 0 fade(@grey, 30%);
+    
+    &:after, &:before {
+      bottom: 0px;
+      left: 13px;
+      width: 70px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: darken(@grey, 5%);
+      transform-origin: 0% 50%;
+      transform: rotate(-120deg);
+    }
+    &:before {
+      top: 8px;
+      left: 7px;
+      transform: rotate(-20deg);
+      width: 50px;
+    }
+    
+  }
+}
