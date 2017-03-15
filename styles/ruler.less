@@ -1,0 +1,16 @@
+@ruler_color: #DFAD8C;
+@ruler_stripe_color: #5C6A79;
+
+.ruler {
+  width: 100px;
+  margin-bottom: 10px;
+  height: 20px;
+  background-color: @ruler_color;
+  border-radius: 3px;
+  border: 2px solid @ruler_stripe_color;
+  // stripes 2px wide and repeating in x
+  background-image: repeating-linear-gradient(to right, transparent, transparent 7px, @ruler_stripe_color 7px, @ruler_stripe_color 9px, transparent 9px);
+  background-repeat: repeat-x;
+  background-size: 100% 40%;
+  box-shadow: 2px 5px 10px -5px fade(black, 6%);
+}

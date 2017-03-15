@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');
-@import url('https://fonts.googleapis.com/css?family=Bad+Script');
-@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 .panda-wrapper .ear {
   z-index: 0;
   width: 80px;
@@ -538,6 +536,44 @@
   transform: rotate(-20deg);
   width: 50px;
 }
+.notepad {
+  width: 150px;
+  height: 200px;
+  background-color: #FF7CB8;
+  position: relative;
+  border: 2px solid #5C6A79;
+  border-radius: 5px;
+  box-shadow: 0px 6px 0 -2px #ECF0F1, 0px 6px 0 #5C6A79, 0 9px 4px rgba(0, 0, 0, 0.2);
+}
+.notepad:before {
+  top: 40%;
+  left: 40%;
+  content: "Notes";
+  font-family: "Bad Script";
+  color: #333;
+}
+.notepad:after {
+  position: absolute;
+  left: 125px;
+  width: 2px;
+  height: 207px;
+  border: 2px solid #FF6CA8;
+  top: -3px;
+  background-color: #FF6CA8;
+  box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.2);
+}
+.ruler {
+  width: 100px;
+  margin-bottom: 10px;
+  height: 20px;
+  background-color: #DFAD8C;
+  border-radius: 3px;
+  border: 2px solid #5C6A79;
+  background-image: repeating-linear-gradient(to right, transparent, transparent 7px, #5C6A79 7px, #5C6A79 9px, transparent 9px);
+  background-repeat: repeat-x;
+  background-size: 100% 40%;
+  box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.06);
+}
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -636,6 +672,9 @@ div:after {
   align-items: center;
   position: relative;
   min-height: 400px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .item.item-panda {
   background: #f1c40f;
@@ -659,6 +698,12 @@ div:after {
 }
 .item.item-clock {
   background: #DCC6E0;
+}
+.item.item-notepad {
+  background: #FFBCD8;
+}
+.item.item-ruler {
+  background: #D5E5E6;
 }
 .item .description {
   font-size: 24px;
