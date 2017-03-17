@@ -11,16 +11,19 @@
   border: 2px solid #606060;
   box-shadow: inset 0px -8px 2px fade(black, 5%), inset -30px 0px 2px fade(black, 2%), 0 0 5px 0 fade(black, 30%);
   &:before {
-    width: 35px;
-    height: 60px;
-    z-index: -10;
-    background-color: white;
-    top: -60px;
-    left: 5.5px;
-    border-radius: 3px;
+    z-index: -12;
+    height: 90px;
+    width: 30px;
+    background-color: #DFAD8C; //#ECF0F1;
+    top: -90px;
+    left: 3px;
+    border-radius: 2px;
     border: 2px solid #606060;
-    background-image: repeating-linear-gradient(to right, transparent, transparent 7.5px, #606060 7.5px, #606060 9.5px), linear-gradient(to bottom, #FFBCD8 15px, transparent 15px, #ECF0F1 20px, transparent 20px, #F1C40F 60px, transparent 60px);
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 2px, #606060 2px, #606060 4px);
+    background-size: 30% 100%;
+    background-repeat: repeat-y;
     box-shadow: 0 0 5px 0 fade(black, 30%);
+    transform: rotate(-8deg);
   }
   &:after {
     width: 35px;
@@ -33,21 +36,6 @@
     border: 2px solid #606060;
     background-image: repeating-linear-gradient(to right, transparent, transparent 7.5px, #606060 7.5px, #606060 9.5px), linear-gradient(to bottom, #F75C4C 15px, transparent 15px, #ECF0F1 20px, transparent 20px, #F1C40F 60px, transparent 60px);
     box-shadow: 0 0 5px 0 fade(black, 30%);
-  }
-  .linjal {
-    position: absolute;
-    z-index: -12;
-    height: 90px;
-    width: 30px;
-    background-color: #DFAD8C; //#ECF0F1;
-    top: -90px;
-    left: 20px;
-    border-radius: 2px;
-    border: 2px solid #606060;
-    background-image: repeating-linear-gradient(to bottom, transparent, transparent 2px, #606060 2px, #606060 4px);
-    background-size: 30% 100%;
-    background-repeat: repeat-y;
-    box-shadow: 0 0 5px 0 fade(black, 30%);
-    transform: rotate(-8deg);
+    transform: rotate(3deg);
   }
 }
