@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');
 .panda-wrapper .ear {
   z-index: 0;
@@ -574,6 +575,60 @@
   background-size: 100% 40%;
   box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.06);
 }
+.calendar {
+  position: absolute;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, #0077C0 100px, transparent 128px), linear-gradient(to bottom, #0077C0 120px, transparent 120px);
+  border-radius: 5px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+.calendar .text {
+  padding-left: 20px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  width: 250px;
+  height: 120px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.calendar .text .month {
+  font-size: 38px;
+}
+.calendar .text .year {
+  font-size: 12px;
+}
+.calendar:after {
+  width: 250px;
+  height: 180px;
+  top: 120px;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  content: '24';
+  font-family: "Oswald", sans-serif;
+  font-size: 92px;
+  color: black;
+}
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -704,6 +759,9 @@ div:after {
 }
 .item.item-ruler {
   background: #D5E5E6;
+}
+.item.item-calendar {
+  background: #19B5FE;
 }
 .item .description {
   font-size: 24px;

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@calendar_color: #0077C0;
+.calendar {
+  position: absolute;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, @calendar_color 100px, transparent 128px), linear-gradient(to bottom, @calendar_color 120px, transparent 120px);
+  border-radius: 5px;
+  // Robot eller Oswals
+  .text {
+    padding-left: 20px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    width: 250px;
+    height: 120px;
+    .display(flex);
+    .justify-content(center);
+    //.align-items(center);
+    .flex-direction(column);
+    .month {
+      font-size: 38px;
+    }
+    .year {
+      font-size: 12px;
+    }
+  }
+  &:after {
+    width: 250px;
+    height: 180px;
+    top: 120px;
+    left: 0;
+    .display(flex);
+    .justify-content(center);
+    .align-items(center);
+    content: '24';
+    font-family: "Oswald", sans-serif;
+    font-size: 92px;
+    color: black;
+  }
+  box-shadow: 0 0 10px 0 fade(black,
+  40%);
+}
