@@ -3,40 +3,40 @@
 .calendar {
   position: absolute;
   position: relative;
-  width: 250px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   background-color: #ffffff;
-  background-image: linear-gradient(to bottom, @calendar_color 100px, transparent 128px), linear-gradient(to bottom, @calendar_color 120px, transparent 120px);
+  background-image: linear-gradient(to bottom, @calendar_color 60px, transparent 85px), linear-gradient(to bottom, @calendar_color 80px, transparent 80px);
   border-radius: 5px;
   // Robot eller Oswals
   .text {
     padding-left: 20px;
     font-family: "Oswald", sans-serif;
     color: white;
-    width: 250px;
-    height: 120px;
+    width: 150px;
+    height: 80px;
     .display(flex);
     .justify-content(center);
     //.align-items(center);
     .flex-direction(column);
     .month {
-      font-size: 38px;
+      font-size: 28px;
     }
     .year {
       font-size: 12px;
     }
   }
   &:after {
-    width: 250px;
-    height: 180px;
-    top: 120px;
+    width: 150px;
+    height: 120px;
+    top: 80px;
     left: 0;
     .display(flex);
     .justify-content(center);
     .align-items(center);
     content: '24';
     font-family: "Oswald", sans-serif;
-    font-size: 92px;
+    font-size: 82px;
     color: black;
   }
   box-shadow: 0 0 10px 0 fade(black,

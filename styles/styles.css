@@ -578,20 +578,19 @@
 .calendar {
   position: absolute;
   position: relative;
-  width: 250px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   background-color: #ffffff;
-  background-image: linear-gradient(to bottom, #0077C0 100px, transparent 128px), linear-gradient(to bottom, #0077C0 120px, transparent 120px);
+  background-image: linear-gradient(to bottom, #0077C0 60px, transparent 85px), linear-gradient(to bottom, #0077C0 80px, transparent 80px);
   border-radius: 5px;
-  border: 2px solid #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 .calendar .text {
   padding-left: 20px;
   font-family: "Oswald", sans-serif;
   color: white;
-  width: 250px;
-  height: 120px;
+  width: 150px;
+  height: 80px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -604,15 +603,15 @@
   flex-direction: column;
 }
 .calendar .text .month {
-  font-size: 38px;
+  font-size: 28px;
 }
 .calendar .text .year {
   font-size: 12px;
 }
 .calendar:after {
-  width: 250px;
-  height: 180px;
-  top: 120px;
+  width: 150px;
+  height: 120px;
+  top: 80px;
   left: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -626,7 +625,7 @@
   align-items: center;
   content: '24';
   font-family: "Oswald", sans-serif;
-  font-size: 92px;
+  font-size: 82px;
   color: black;
 }
 body {
