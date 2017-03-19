@@ -1,0 +1,214 @@
+// --------------------------------------------------
+// Flexbox LESS mixins
+// The spec: http://www.w3.org/TR/css3-flexbox
+// --------------------------------------------------
+// Flexbox display
+// flex or inline-flex
+.display(@display: flex) {
+  display: ~"-webkit-@{display}";
+  display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+  display: ~"-ms-@{display}"; // IE11
+  display: @display;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+.flex(@columns: initial) {
+  -webkit-flex: @columns;
+  -ms-flex: @columns;
+  flex: @columns;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+.flex-direction(@direction: row) {
+  -webkit-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+.flex-wrap(@wrap: nowrap) {
+  -webkit-flex-wrap: @wrap;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+.flex-flow(@flow) {
+  -webkit-flex-flow: @flow;
+  -ms-flex-flow: @flow;
+  flex-flow: @flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+.flex-order(@order: 0) {
+  -webkit-order: @order;
+  -ms-order: @order;
+  order: @order;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+.flex-grow(@grow: 0) {
+  -webkit-flex-grow: @grow;
+  -ms-flex-grow: @grow;
+  flex-grow: @grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number> 
+.flex-shrink(@shrink: 1) {
+  -webkit-flex-shrink: @shrink;
+  -ms-flex-shrink: @shrink;
+  flex-shrink: @shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width> 
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+  -ms-flex-basis: @width;
+  flex-basis: @width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around 
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+  -ms-justify-content: @justify;
+  justify-content: @justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch 
+.align-content(@align: stretch) {
+  -webkit-align-content: @align;
+  -ms-align-content: @align;
+  align-content: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch 
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+  -ms-align-items: @align;
+  align-items: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch 
+.align-self(@align: auto) {
+  -webkit-align-self: @align;
+  -ms-align-self: @align;
+  align-self: @align;
+}
+
+html {
+  background: #FDE3A7;
+  .display(flex);
+  .flex(1);
+  height: 100%;
+  .justify-content(center);
+  .align-items(center);
+}
+
+div:before,
+div:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+
+.pizza {
+  position: relative;
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #F4B350;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 6px fade(#000, 5%), 0 3px 6px darken(#F4B350, 30%);
+  
+  
+  @1_circle_x: 80px;
+  @1_circle_y: 80px;
+  @2_circle_x: 110px;
+  @2_circle_y: 40px;
+  @3_circle_x: 100px;
+  @3_circle_y: 130px;
+  @4_circle_x: 38px;
+  @4_circle_y: 40px;
+  @5_circle_x: 38px;
+  @5_circle_y: 115px;
+  
+  background-image:
+    linear-gradient(to right, transparent 100px, fade(#000, 5%) 100px),
+    //linear-gradient(-45deg, transparent 140px, darken(#F4B350, 10%) 140px,darken(#F4B350, 10%) 145px, transparent 145px),
+    //linear-gradient(90deg, transparent 97px, darken(#F4B350, 10%), 97px,darken(#F4B350, 10%) 102px, transparent 102px),
+    // pepperoni
+    radial-gradient(circle at @1_circle_x + 10px @1_circle_y + 15px, fade(#fff, 20%) 5px, transparent 5px),
+       radial-gradient(circle at @1_circle_x + 20px @1_circle_y + 29px, fade(#fff, 20%) 8px, transparent 8px),
+      radial-gradient(circle at @1_circle_x + 24px @1_circle_y + 12px, fade(#fff, 20%) 3px, transparent 3px),
+    radial-gradient(circle at @1_circle_x+20px @1_circle_y+20px, #e74c3c 20px, transparent 20px),
+    // pepperoni
+    radial-gradient(circle at @2_circle_x + 8px @2_circle_y + 15px, fade(#fff, 20%) 6px, transparent 6px),
+       radial-gradient(circle at @2_circle_x + 20px @2_circle_y + 29px, fade(#fff, 20%) 3px, transparent 3px),
+      radial-gradient(circle at @2_circle_x + 24px @2_circle_y + 12px, fade(#fff, 20%) 7px, transparent 7px),
+    radial-gradient(circle at @2_circle_x+20px @2_circle_y+20px, #e74c3c 20px, transparent 20px),
+    // pepperoni
+    radial-gradient(circle at @3_circle_x + 10px @3_circle_y + 12px, fade(#fff, 20%) 5px, transparent 5px),
+       radial-gradient(circle at @3_circle_x + 20px @3_circle_y + 29px, fade(#fff, 20%) 4px, transparent 4px),
+      radial-gradient(circle at @3_circle_x + 26px @3_circle_y + 12px, fade(#fff, 20%) 9px, transparent 9px),
+    radial-gradient(circle at @3_circle_x+20px @3_circle_y+20px, #e74c3c 20px, transparent 20px),
+    // pepperoni
+    radial-gradient(circle at @4_circle_x + 10px @4_circle_y + 12px, fade(#fff, 20%) 2px, transparent 2px),
+       radial-gradient(circle at @4_circle_x + 20px @4_circle_y + 29px, fade(#fff, 20%) 7px, transparent 7px),
+      radial-gradient(circle at @4_circle_x + 26px @4_circle_y + 12px, fade(#fff, 20%) 4px, transparent 4px),
+    radial-gradient(circle at @4_circle_x+20px @4_circle_y+20px, #e74c3c 20px, transparent 20px),
+     // pepperoni
+    radial-gradient(circle at @5_circle_x + 10px @5_circle_y + 12px, fade(#fff, 20%) 5px, transparent 5px),
+       radial-gradient(circle at @5_circle_x + 15px @5_circle_y + 29px, fade(#fff, 20%) 9px, transparent 9px),
+      radial-gradient(circle at @5_circle_x + 26px @5_circle_y + 12px, fade(#fff, 20%) 2px, transparent 2px),
+    radial-gradient(circle at @5_circle_x+20px @5_circle_y+20px, #e74c3c 20px, transparent 20px),
+    
+radial-gradient(circle at 50% 50%, fade(#FDE3A7, 75%), 80px, transparent 80px),
+    radial-gradient(circle at 50% 50%, fade(#e74c3c, 70%) 85px, transparent 85px);
+  
+ // background-repeat: repeat-x;
+ // background-size: 100% 100%, 100% 50%, 100% 50%, 100% 100%, 100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+  //background-position: center center, 100px 0,0 0,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center,center center;
+  
+  &:before {
+    width: 30px;
+    height: 20px;
+    background-color: fade(#26A65B, 95%);
+    border-radius: 30px 0 20px 0;
+    top: 30px;
+    left: 60px;
+    
+    box-shadow: 20px 80px 0 -2px fade(#26A65B, 95%),
+      80px 90px 0 3px fade(#26A65B, 95%),
+      -30px 50px 0 1px fade(#26A65B, 95%),
+      74px 30px 0 -2px fade(#26A65B, 95%);
+  }
+  
+}
