@@ -11,6 +11,7 @@
 @import "ruler.less";
 @import "calendar.less";
 @import "pencil-jar.less";
+@import "pizza.less";
 
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');
 
@@ -113,8 +114,12 @@ div:after {
         background: #C0C0C0;
         z-index: 0;
     }
+    &.item-pizza {
+        background: #FDE3A7;
+    }
 
     .description {
+        display: none;
         font-size: 24px;
         font-family: 'Bad Script', cursive;
         color: #333;

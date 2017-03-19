@@ -669,6 +669,25 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   transform: rotate(3deg);
 }
+.pizza {
+  position: relative;
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #F4B350;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 6px rgba(0, 0, 0, 0.05), 0 3px 6px #a1650a;
+  background-image: linear-gradient(to right, transparent 100px, rgba(0, 0, 0, 0.05) 100px), radial-gradient(circle at 90px 95px, rgba(255, 255, 255, 0.2) 5px, transparent 5px), radial-gradient(circle at 100px 109px, rgba(255, 255, 255, 0.2) 8px, transparent 8px), radial-gradient(circle at 104px 92px, rgba(255, 255, 255, 0.2) 3px, transparent 3px), radial-gradient(circle at 100px 100px, #e74c3c 20px, transparent 20px), radial-gradient(circle at 118px 55px, rgba(255, 255, 255, 0.2) 6px, transparent 6px), radial-gradient(circle at 130px 69px, rgba(255, 255, 255, 0.2) 3px, transparent 3px), radial-gradient(circle at 134px 52px, rgba(255, 255, 255, 0.2) 7px, transparent 7px), radial-gradient(circle at 130px 60px, #e74c3c 20px, transparent 20px), radial-gradient(circle at 110px 142px, rgba(255, 255, 255, 0.2) 5px, transparent 5px), radial-gradient(circle at 120px 159px, rgba(255, 255, 255, 0.2) 4px, transparent 4px), radial-gradient(circle at 126px 142px, rgba(255, 255, 255, 0.2) 9px, transparent 9px), radial-gradient(circle at 120px 150px, #e74c3c 20px, transparent 20px), radial-gradient(circle at 48px 52px, rgba(255, 255, 255, 0.2) 2px, transparent 2px), radial-gradient(circle at 58px 69px, rgba(255, 255, 255, 0.2) 7px, transparent 7px), radial-gradient(circle at 64px 52px, rgba(255, 255, 255, 0.2) 4px, transparent 4px), radial-gradient(circle at 58px 60px, #e74c3c 20px, transparent 20px), radial-gradient(circle at 48px 127px, rgba(255, 255, 255, 0.2) 5px, transparent 5px), radial-gradient(circle at 53px 144px, rgba(255, 255, 255, 0.2) 9px, transparent 9px), radial-gradient(circle at 64px 127px, rgba(255, 255, 255, 0.2) 2px, transparent 2px), radial-gradient(circle at 58px 135px, #e74c3c 20px, transparent 20px), radial-gradient(circle at 50% 50%, rgba(253, 227, 167, 0.75), 80px, transparent 80px), radial-gradient(circle at 50% 50%, rgba(231, 76, 60, 0.7) 85px, transparent 85px);
+}
+.pizza:before {
+  width: 30px;
+  height: 20px;
+  background-color: rgba(38, 166, 91, 0.95);
+  border-radius: 30px 0 20px 0;
+  top: 30px;
+  left: 60px;
+  box-shadow: 20px 80px 0 -2px rgba(38, 166, 91, 0.95), 80px 90px 0 3px rgba(38, 166, 91, 0.95), -30px 50px 0 1px rgba(38, 166, 91, 0.95), 74px 30px 0 -2px rgba(38, 166, 91, 0.95);
+}
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -807,7 +826,11 @@ div:after {
   background: #C0C0C0;
   z-index: 0;
 }
+.item.item-pizza {
+  background: #FDE3A7;
+}
 .item .description {
+  display: none;
   font-size: 24px;
   font-family: 'Bad Script', cursive;
   color: #333;
