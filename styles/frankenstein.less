@@ -1,0 +1,75 @@
+.frankenstein {
+@body_color: #4DAF7C;
+@gray: #606060; //333
+@hair_color: #1d1d1d;
+  position: relative;
+  z-index: 0;
+  width: 120px;
+  height: 160px;
+  background-color: @body_color;
+  border-bottom-left-radius: 50px 40px;
+  border-bottom-right-radius: 50px 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, @gray 3px, @gray 5px), repeating-linear-gradient(0deg, transparent, transparent 3px, @gray 3px, @gray 5px), // hair
+  repeating-linear-gradient(90deg, transparent, transparent 10px, @hair_color 10px, @hair_color 20px), repeating-linear-gradient(90deg, transparent, transparent 0px, @hair_color 0px, @hair_color 10px), ;
+  background-size: 100% 10px, 100% 5px, 30% 28px, 100% 23px;
+  background-position: 0px 40px, 0px 44px, -5px 0px, 0px 0px;
+  background-repeat: repeat-x;
+  box-shadow: //inset 2px 20px 0 @hair_color,
+  inset 0px 30px 0 fade(@hair_color, 10%), 10px 8px 0 fade(black, 10%);
+  .screw {
+    @width: 15px;
+    @color: #363636;
+    width: @width;
+    height: 10px;
+    background-color: @color;
+    position: absolute;
+    top: 40px;
+    left: -@width;
+    box-shadow: 120px+@width 0 @color;
+  }
+  .eyes_nose {
+    position: absolute;
+    background-color: @hair_color;
+    width: 80px;
+    height: 10px;
+    top: 70px;
+    left: 20px;
+    border-radius: 3px;
+    box-shadow: 2px -2px 0 2px fade(black, 10%);
+    &:before {
+      @color: #ecf0f1;
+      width: 5px;
+      height: 5px;
+      background-color: black;
+      border-radius: 50%;
+      z-index: -10;
+      left: 18px;
+      top: 8px;
+      box-shadow: 40px 0px 0 0 black, 0px 2px 0 6px @color, 40px 2px 0 6px @color, 14px 22px 0 0 fade(black, 20%), 24px 22px 0 0 fade(black, 20%);
+    }
+  }
+  .mouth {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    top: 125px;
+    left: 42px;
+    transform: rotate(-5deg);
+  }
+  .wound {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background-color: transparent;
+    top: 135px;
+    left: 8px;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, #2c3e50 3px, #2c3e50 5px), repeating-linear-gradient(0deg, transparent, transparent 3px, #c0392b 3px, #c0392b 5px);
+    background-size: 100% 10px, 100% 5px;
+    background-repeat: repeat-x;
+    background-position: 2px 0px, 0px 4px;
+    transform: rotate(35deg);
+  }
+}
