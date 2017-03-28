@@ -1,0 +1,36 @@
+.roundedCrust() {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  background-color: @crust;
+}
+
+.applePie {
+    @filling_color: #A61D4B; // #EC792A;
+    @crust: #D89028;
+    @crust_overlay: #F6B632;
+    @crust_overlay_darker: #F5A426;
+    .roundedCrust;
+    box-shadow: 5px 5px 0 4px fade(black, 10%);
+    &:before {
+        .roundedCrust;
+        transform: rotate(30deg);
+    }
+    &:after {
+        .roundedCrust;
+        transform: rotate(-30deg);
+    }
+    position: relative;
+    .filling {
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: @filling_color;
+        background-image: repeating-linear-gradient(75deg, transparent, transparent 15px, @crust_overlay 15px, @crust_overlay 25px), repeating-linear-gradient(-70deg, transparent, transparent 15px, @crust_overlay_darker 15px, @crust_overlay_darker 25px);
+        box-shadow: inset 0 0 20px fade(@crust, 70%);
+    }
+}

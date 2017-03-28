@@ -689,7 +689,7 @@
   box-shadow: 20px 80px 0 -2px rgba(38, 166, 91, 0.95), 80px 90px 0 3px rgba(38, 166, 91, 0.95), -30px 50px 0 1px rgba(38, 166, 91, 0.95), 74px 30px 0 -2px rgba(38, 166, 91, 0.95);
 }
 .hamburger {
-  width: 190px;
+  width: 140px;
   height: 120px;
   position: relative;
 }
@@ -986,6 +986,40 @@
   top: 10px;
   left: 5px;
 }
+.applePie {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  background-color: #D89028;
+  box-shadow: 5px 5px 0 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.applePie:before {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  background-color: #D89028;
+  transform: rotate(30deg);
+}
+.applePie:after {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  background-color: #D89028;
+  transform: rotate(-30deg);
+}
+.applePie .filling {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #A61D4B;
+  background-image: repeating-linear-gradient(75deg, transparent, transparent 15px, #F6B632 15px, #F6B632 25px), repeating-linear-gradient(-70deg, transparent, transparent 15px, #F5A426 15px, #F5A426 25px);
+  box-shadow: inset 0 0 20px rgba(216, 144, 40, 0.7);
+}
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1135,6 +1169,9 @@ div:after {
 }
 .item.item-anna {
   background: rgba(0, 0, 0, 0.02);
+}
+.item.item-pie {
+  background: #F5D76E;
 }
 .item .description {
   display: none;
