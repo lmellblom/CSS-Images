@@ -1,0 +1,38 @@
+
+.mike_monster {
+
+@mike_green: #D3E255;
+@eye_color1: #1B7F6F;
+@eye_color2: #062F28;
+@ear_color: #E9D5B7;
+@shadow_color: fade(black, 10%);
+  width: 180px;
+  height: 190px;
+  background: @mike_green;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-right-radius: 50% 40%;
+  border-bottom-left-radius: 50% 40%;
+  position: relative;
+  
+  box-shadow: 10px 10px 5px -5px @shadow_color, inset 3px 0px 0 2px @shadow_color;
+  
+  background-image: radial-gradient(ellipse at 44% 38%, fade(white, 100%) 5px, transparent 5px), radial-gradient(circle at 50% 40%, @eye_color2 18px, transparent 22px),  radial-gradient(circle at 50% 40%, @eye_color1 35px, transparent 38px), radial-gradient(circle at 50% 40%, white 55px, transparent 55px),
+    radial-gradient(circle at 50% 45%, fade(black, 10%) 50px, transparent 50px),
+    radial-gradient(circle at 50% 60%, @mike_green 40px, transparent 41px),
+    radial-gradient(circle at 50% 70%, fade(black, 70%) 30px, transparent 31px) ;
+  &:after {
+    width: 130px;
+    height: 90px;
+    background: transparent;
+    border-top-left-radius: 50% 60%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-right-radius: 50% 40%;
+    border-bottom-left-radius: 50% 40%;
+    box-shadow: 0 35px 0px 1px @ear_color;
+    position: absolute;
+    top: -65px;
+    left: 23px;
+    z-index: -1;
+  }
+}
