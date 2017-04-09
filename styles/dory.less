@@ -1,0 +1,90 @@
+
+.dory {
+    @shadow_color: fade(black, 10%);
+@body: #7AB9FF;
+@eye_black:#140C16;
+@eye_color:#632C5B;
+@eye_color_light:#F05AB4;
+@tail_yellow:#FDFB78;
+@tail_darker:#273131;
+  width: 120px;
+  height: 120px;
+  background: @body;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 2px 4px 0 @shadow_color, inset 2px -2px 2px 0px @shadow_color;
+  background-image: linear-gradient(to right, transparent 50%, lighten(@body, 5%) 50%);
+  .eye {
+    position: absolute;
+    width: 65px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    top: 25px;
+    
+    &.left {
+      left: -10px; 
+      background-image: radial-gradient(circle at 55% 45%, #ffffff 4px, transparent 5px), radial-gradient(circle at 70% 50%, @eye_black 14px, transparent 16px), radial-gradient(circle at 70% 50%, @eye_color 24px, transparent 25px);
+    }
+    &.right {
+      right: -10px; 
+      background-image: radial-gradient(circle at 18% 45%, #ffffff 4px, transparent 5px), radial-gradient(circle at 28% 50%, @eye_black 14px, transparent 16px), radial-gradient(circle at 28% 50%, @eye_color 24px, transparent 25px);
+    }
+    box-shadow: 0px 2px 4px 0 @shadow_color, 0px 2px 0px 0 @shadow_color;
+  }
+  
+  .tail {
+    position: absolute;
+
+    z-index: -1;
+    
+    &.back {
+      top: 20px;
+    left: -19px;
+      width: 100px !important;
+      height: 60px !important;
+      background: linear-gradient(to top right, @body 0%, @body 50%, transparent 50%, transparent 100%);
+    box-shadow: inset 2px 0px 0px 0px @tail_yellow, inset 4px 0px 0px 0px @tail_darker;
+      transform: rotate(-10deg);
+    }
+    
+    width: 60px;
+    height: 20px;
+    
+    &.left {
+    top: 100px;
+    left: -5px;
+
+    background: linear-gradient(to bottom right, @body 0%, @body 50%, transparent 50%, transparent 100%);
+    box-shadow: inset 2px 0px 0px 0px @tail_yellow, inset 4px 0px 0px 0px @tail_darker;
+  }
+    
+    &.right {
+    top: 98px;
+    right: -5px;
+
+    background: linear-gradient(to bottom left, @body 0%, @body 50%, transparent 50%, transparent 100%);
+    box-shadow: inset -2px 0px 0px 0px @tail_yellow, inset -4px 0px 0px 0px @tail_darker;
+  }
+  }
+  
+  .mouth {
+    width: 30px;
+    height: 15px;
+    background-color: fade(black, 70%);
+    position: absolute;
+    top: 80%;
+    left: 45px;
+    border-radius: 0 0 100px 100px;
+  }
+  &:before {
+     font-family: 'Bad Script', cursive;
+    color: white;
+    font-size: 20px;
+    width: 250px;
+    margin-top: -55px;
+    margin-left: -45px;
+    transform: rotate(-20deg);
+    content: 'Just keep swimming'
+  }
+}

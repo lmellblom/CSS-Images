@@ -1215,6 +1215,78 @@
   left: 23px;
   z-index: -1;
 }
+.dory {
+  width: 120px;
+  height: 120px;
+  background: #7AB9FF;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1), inset 2px -2px 2px 0px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, transparent 50%, #94c6ff 50%);
+}
+.dory .eye {
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  top: 25px;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1), 0px 2px 0px 0 rgba(0, 0, 0, 0.1);
+}
+.dory .eye.left {
+  left: -10px;
+  background-image: radial-gradient(circle at 55% 45%, #ffffff 4px, transparent 5px), radial-gradient(circle at 70% 50%, #140C16 14px, transparent 16px), radial-gradient(circle at 70% 50%, #632C5B 24px, transparent 25px);
+}
+.dory .eye.right {
+  right: -10px;
+  background-image: radial-gradient(circle at 18% 45%, #ffffff 4px, transparent 5px), radial-gradient(circle at 28% 50%, #140C16 14px, transparent 16px), radial-gradient(circle at 28% 50%, #632C5B 24px, transparent 25px);
+}
+.dory .tail {
+  position: absolute;
+  z-index: -1;
+  width: 60px;
+  height: 20px;
+}
+.dory .tail.back {
+  top: 20px;
+  left: -19px;
+  width: 100px !important;
+  height: 60px !important;
+  background: linear-gradient(to top right, #7AB9FF 0%, #7AB9FF 50%, transparent 50%, transparent 100%);
+  box-shadow: inset 2px 0px 0px 0px #FDFB78, inset 4px 0px 0px 0px #273131;
+  transform: rotate(-10deg);
+}
+.dory .tail.left {
+  top: 100px;
+  left: -5px;
+  background: linear-gradient(to bottom right, #7AB9FF 0%, #7AB9FF 50%, transparent 50%, transparent 100%);
+  box-shadow: inset 2px 0px 0px 0px #FDFB78, inset 4px 0px 0px 0px #273131;
+}
+.dory .tail.right {
+  top: 98px;
+  right: -5px;
+  background: linear-gradient(to bottom left, #7AB9FF 0%, #7AB9FF 50%, transparent 50%, transparent 100%);
+  box-shadow: inset -2px 0px 0px 0px #FDFB78, inset -4px 0px 0px 0px #273131;
+}
+.dory .mouth {
+  width: 30px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 80%;
+  left: 45px;
+  border-radius: 0 0 100px 100px;
+}
+.dory:before {
+  font-family: 'Bad Script', cursive;
+  color: white;
+  font-size: 20px;
+  width: 250px;
+  margin-top: -55px;
+  margin-left: -45px;
+  transform: rotate(-20deg);
+  content: 'Just keep swimming';
+}
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1376,6 +1448,10 @@ div:after {
 }
 .item.item-mike {
   background: #4F716D;
+  z-index: 0;
+}
+.item.item-dory {
+  background: #2299E6;
   z-index: 0;
 }
 .item .description {
